@@ -1,18 +1,14 @@
 const { argv } = require("node:process");
-const Big = require("big.js");
 
 let integer = parseInt(argv[2]);
 
 function factorial(a) {
-  let result = Big(1);
-  for (i = a; i >= 1; i--) {
-    result = result.times(i);
-  }
-  return result;
+  if (a <= 1) return 1;
+  return a * factorial(a - 1);
 }
 
 if (isNaN(integer)) {
   console.log(1);
 } else {
-  console.log(factorial(integer).toString());
+  console.log(factorial(integer));
 }
