@@ -1,7 +1,7 @@
 const { argv } = require("node:process");
 
 let size = parseInt(argv[2]);
-let unit = "x";
+let unit = "X";
 let rows = "";
 let i;
 
